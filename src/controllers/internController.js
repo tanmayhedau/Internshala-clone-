@@ -6,6 +6,7 @@ const { isValid, isValidEmail, isValidMobile, isValidName } = require('../valida
 //<----------------------------------create Intern--------------------------------> //
 
 const createIntern = async (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin","*")
     try {
         let data = req.body;
 

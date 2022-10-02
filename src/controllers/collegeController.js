@@ -20,7 +20,6 @@ const createCollege = async function (req, res) {
                 .send({ status: false, message: "Data is required for creating college details" })
         };
 
-
         if (!isValidRequest(data)) {
             return res
                 .status(400)
@@ -92,6 +91,7 @@ const createCollege = async function (req, res) {
 //<-----------------------------college Details---------------------------->//
 
 const collegeDetails = async (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin","*")
     try {
         let data = req.query;
         let collegeName = req.query.collegeName

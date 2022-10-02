@@ -3,11 +3,13 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const route = require('./routes/route');
 const app = express();
+const multer = require('multer')
 
 app.use(bodyParser.json());
+app.use(multer().any())
 
 let url = "mongodb+srv://tannmayhedau619:Tanmay%40619@cluster0.fw1xhuw.mongodb.net/group2Database";
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3001;
 
 
 mongoose
